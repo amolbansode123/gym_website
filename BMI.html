@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            /* background-image: linear-gradient(120deg,#ff6b6b,#5f27cd); */
+            min-height: 100vh;
+            font-family: 'Baloo Bhaina 2', cursive;
+            background-image: url('barbell.jpg.jpg');
+            background-size: 1500px;
+        }
+       
+        div{
+            width: 500px;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            border: 2px solid white;
+            width: 600px;
+            height: 350px;
+            padding: 20px;
+            /* margin: 10px; */
+            border-radius: 10px;
+            /* background-color: white; */
+            /* box-shadow: 1px 1px 20px ; */
+
+      
+        }
+        .h2{
+            font-size: 35px;
+            font-weight: 650px;
+            text-decoration: underline;
+        }
+        .text{
+            text-align: center;
+            /* margin-left: 300px; */
+
+        }
+        #w, #h{
+            color: white
+            /* text-align: left; */
+            /* font-size: 15px; */
+            font-weight: 300px;
+            outline: none;
+            border: none;
+            /* background: none; */
+            /* border-bottom: 2px solid rebeccapurple; */
+            width: 100px;
+            border-radius: 5px;
+        }
+        #w:focus,#h:focus{
+            border-bottom: 2px solid rgb(5, 2, 8);
+            width: 200px;
+            transition: 0.5s;
+        }
+        #result{
+            color: white;
+        }
+        #btn{
+            font-family: 'Baloo Bhaina 2', cursive;
+            margin-top: 10px;
+            border: none;
+            color: rgb(0, 0, 0);
+            /* background-image: linear-gradient(120deg,#ff6b6b,#5f27cd); */
+            width: 150px;
+            border-radius: 30px;
+            outline: none;
+            cursor: pointer;
+        }
+        #btn:hover{
+            box-shadow: 1px 1px 10px #190b58;
+
+        }
+        #info{
+            font-size: 20px;
+            font-family: 'Baloo Bhaina 2', cursive;
+            text-decoration: underline;
+            
+        }
+        .container h3{
+            position: absolute; 
+            padding: 15px; 
+            text-align: center;
+            padding-left: 10px;
+        }
+        .left img{
+            position: relative;
+            padding: 6px;
+            padding-left: 20px;
+            filter: invert(94%);
+            float: left;
+            width: 50px;
+            
+        }
+        .left{
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+        
+        
+    </style>
+    <script type="text/javascript">
+         function BMI()
+        {
+        var wt=document.getElementById('w').value;
+        var ht=document.getElementById('h').value;
+        var bmi=wt/(ht/100*ht/100);
+        var bmio=(bmi.toFixed(2));
+        document.getElementById("result").innerHTML="your BMI is" +bmio;
+      // alert(bmi);
+        }
+    </script>
+</head>
+<body class="container">
+   <header class="left">
+       <img src="https://static.vecteezy.com/system/resources/thumbnails/000/595/983/small/04012019-25.jpg" alt="">
+        <h3>AB Fitness</h3>
+   </header>
+
+    <div>
+    <h2>BMI Calculator</h2>
+    <p class="text">Enter Weight</p>
+    <input type="text" id="w">
+    <p class="text">Enter Height</p>
+    <input type="text" id="h">
+    <p id="result"></p>
+    <button id="btn" onclick="BMI()">Calculate</button>
+    <p id="info">Plzz enter the Weight in [kg] and Height in [cm]</p>
+    </div>
+
+    
+</body>
+</html>
